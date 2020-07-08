@@ -5,6 +5,15 @@ const header = document.querySelector("header");
 header.addEventListener("mouseover", (evt) => {
     evt.target.style.color = "white";
     evt.target.style.border = "1px solid pink";
+    
+});
+const logo = document.querySelector('.logo-heading');
+logo.addEventListener("mouseover", (evt) => {
+    evt.stopPropagation();
+    evt.target.style.color = "yellow";
+    evt.target.style.border = "1px solid black";
+    
+    
 });
 
 document.addEventListener("keydown", (evt) => { if(evt.key === "a"){
@@ -18,7 +27,7 @@ document.addEventListener("keydown", (evt) => { if(evt.key === "a"){
     const typer = document.querySelector("#typer");
     const selected = document.querySelector("#inputer");
 
-    selected.addEventListener("select", () => { })
+    selected.addEventListener("select", () => {console.log(" You copy cat") })
     selected.addEventListener("input", (evt) => {typer.textContent = evt.target.value;});
 }})
 let foot = document.querySelector("footer");
