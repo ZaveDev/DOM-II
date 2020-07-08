@@ -54,3 +54,7 @@ function backgroundColorChange() {
 }
 
 document.addEventListener("scroll", () => {backgroundColorChange()});
+
+let navA = document.querySelectorAll(".nav-link");
+console.log(navA);
+navA.forEach( (evt) => evt.addEventListener("click", (evt) => {evt.preventDefault()} ) );
